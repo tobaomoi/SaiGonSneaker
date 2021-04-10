@@ -5,6 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 
+// Import jquery, popper.js and bootstrap
+import "bootstrap/dist/css/bootstrap.min";
+import "jquery/dist/jquery.min";
+import "popper.js/dist/umd/popper.min";
+import "bootstrap/dist/js/bootstrap.min";
+
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
