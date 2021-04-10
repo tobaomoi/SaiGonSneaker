@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
@@ -10,6 +9,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min";
 import "popper.js/dist/umd/popper.min";
 import "../node_modules/bootstrap/dist/js/bootstrap.min";
+
+// Import _main.scss
+import "./sass/_main.scss";
 
 ReactDOM.render(
 	<React.StrictMode>
