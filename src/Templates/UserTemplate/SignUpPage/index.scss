@@ -1,0 +1,156 @@
+:root {
+    font-size: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.split-screen {
+    display: flex;
+    background-image: url("../../../assets/pictures/signup.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #233975;
+}
+a:hover {
+    text-decoration: none;
+}
+.right {
+    background-color: white;
+    margin-top: 2rem;
+    width: 25rem;
+    height: auto;
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+
+    .copy {
+        color: black;
+        text-align: center;
+    }
+
+    p {
+        margin: 1.5em 0;
+        font-size: 0.875rem;
+    }
+}
+
+.right input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #c4c4c4;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    border: 0;
+    border-bottom: 1px solid black;
+}
+#policy {
+    margin-left: 2rem;
+    font-size: 12px;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.input-container .password {
+    position: relative;
+    i {
+        position: absolute;
+        top: 42px;
+        right: 16px;
+    }
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 0 1.25rem 0;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.checkbox-container:hover input:checked ~ .checkmark {
+    background-color: #101e46;
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #233975;
+    border: 1px solid #233975;
+}
+.checkmark {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    top: -4px;
+    left: 0;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox-container .checkmark:after {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    width: 5px;
+    height: 10px;
+    left: 8px;
+    top: 4px;
+    transform: rotate(45deg);
+}
+
+.singup-btn {
+    display: block;
+    width: 100%;
+    background: #233975;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.singup-btn:hover {
+    background: #2c4893;
+}
