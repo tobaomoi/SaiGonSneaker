@@ -13,7 +13,7 @@ import axios from "axios";
  */
 
 const callApi = axios.create({
-  baseURL: "http://localhost:5000/api"
+	baseURL: "https://saigonsneakers-be.herokuapp.com/api",
 });
 
 export default callApi;
