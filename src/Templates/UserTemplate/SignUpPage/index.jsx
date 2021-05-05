@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import callApi from "../../../api/index";
 
 function SignUpPage(props) {
+  const [message, setMessage] = useState("");
 	const [signUpData, setSignUpData] = useState({
 		email: "",
 		password: "",
@@ -32,11 +34,11 @@ function SignUpPage(props) {
 			.post("/users/signup", signUpData)
 			.then((result) => {
 				// Nếu gọi Api thành công thì dữ liệu Backend trả về sẽ chạy vô đây
-				console.log(result);
+        props.history.push("/login");
 			})
 			.catch((err) => {
 				// Ngược lại thì chạy vô đây
-				console.log(err);
+        setMessage(err.response.data.error);
 			});
 	};
 	/**
@@ -46,7 +48,7 @@ function SignUpPage(props) {
 	 */
 	return (
 		<div className='sign_Up_Page'>
-			<form onSubmit={handleUserSignUp} className='sign_Up_Form'>
+			<form onSubmit={handleUserSignUp} className='sign_Up_Form' autoComplete="false">
 				<h2 className='text-center'>Đăng kí</h2>
 				<div className='input-container'>
 					<label htmlFor='ename'>Email:</label>
@@ -92,27 +94,16 @@ function SignUpPage(props) {
 						name='displayName'
 						placeholder='Vui lòng nhập tên hiển thị ...'
 					/>
-				</div>
-				<div className='input-container '>
-					<label className='checkbox-container'>
-						<input type='checkbox' />
-						<span className='checkmark'></span>
-					</label>
-					<p id='policy'>
-						Đồng ý với
-						<a href='#'>
-							<strong> điều khoản</strong>
-						</a>
-					</p>
-				</div>
+        </div>
+        <p id="notification">{message}</p>
 				<button className='singup-btn' type='submit'>
 					Đăng kí
 				</button>
 				<div>
-					<div className='login-container'>
-						<p>
-							<a href='#'>Bạn đã có tài khoản ?</a>
-						</p>
+          <div className='logon-container'>
+            <p>
+              <NavLink id="have__account" to='/signup'>Bạn đã có tài khoản ?</NavLink>
+            </p>
 					</div>
 				</div>
 			</form>

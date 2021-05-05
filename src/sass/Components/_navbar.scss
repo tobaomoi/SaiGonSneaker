@@ -1,0 +1,47 @@
+nav {
+  position: fixed;
+  display: block;
+  height: 80px;
+  width: 100%;
+  .container {
+    position: relative;
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    .navbar-collapse {
+      font-size: 1rem;
+      .navbar-nav {
+        margin-right: 0;
+        width: 100%;
+        .user__Logon {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 100%;
+          #user__Name {
+            margin-bottom: 0;
+            margin-right: 10px;
+            padding-right: 10px;
+            border-right: 1.5px solid #1D1D1D;
+          }
+          #logon {
+            border: 0;
+            border-radius: 15px;
+            padding: 5px 12px;
+            background-color: #1D1D1D;
+            color: white;
+            transition: .3s all;;
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+            &:hover {
+              background-color: #E63535;
+            }
+          }
+        }
+      }
+    }
+  }
+}

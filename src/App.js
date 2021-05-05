@@ -8,7 +8,7 @@ const LoadedComponent = loadable((props) => import(`./Templates/UserTemplate/${p
 const PageNotFound = loadable(() => import("./Components/PageNotFound/index.jsx"));
 
 const renderHomeAndProductDetailPage = (routes) => {
-  if (routes && routes.length > 0) {
+  if (routes && routes.length > 0) {  
     return routes.map((route, index) => {
       return (
         <SaiGonSneakers key={index} path={route.path} exact={route.exact} Component={route.component} />
@@ -20,10 +20,10 @@ const renderHomeAndProductDetailPage = (routes) => {
 function App() {
   return (
     <Switch>
-      <Route path="/login" exact={true} render={() => <LoadedComponent pageName="LoginPage" />} />
-      <Route path="/signup" exact={true} render={() => <LoadedComponent pageName="SignUpPage" />} />
+      <Route path="/login" exact={true} render={(routeProps) => <LoadedComponent {...routeProps} pageName="LoginPage" />} />
+      <Route path="/signup" exact={true} render={(routeProps) => <LoadedComponent {...routeProps} pageName="SignUpPage" />} />
       {renderHomeAndProductDetailPage(HomeAndProductDetailRoutes)}
-      <Route path="*" render={() => <PageNotFound />} />
+      <Route path="*" render={(routeProps) => <PageNotFound {...routeProps} />} />
     </Switch>
   );  
 }

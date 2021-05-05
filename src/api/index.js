@@ -12,8 +12,10 @@ import axios from "axios";
  *    .catch((err)=>{"Call Api không thành công !"});
  */
 
+// https://saigonsneakers-be.herokuapp.com/api
+
 const callApi = axios.create({
-	baseURL: "https://saigonsneakers-be.herokuapp.com/api",
+	baseURL: "http://localhost:5000/api",
 });
 
 export default callApi;

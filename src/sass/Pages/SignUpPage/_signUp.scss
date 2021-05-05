@@ -4,7 +4,7 @@
 }
 .sign_Up_Page {
     display: flex;
-    background-image: url("../../../Assets/img/signup.jpg");
+    background-image: url("../../../Assets/img/background.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     align-items: center;
@@ -49,6 +49,11 @@
         border-bottom: 1px solid black;
     }
 
+    #notification {
+      text-align: center;
+      color: red;
+    }
+
     p {
         margin: 1.5em 0;
         font-size: 0.875rem;
@@ -60,11 +65,6 @@
         &:hover {
             text-decoration: none;
         }
-    }
-
-    #policy {
-        margin-left: 2rem;
-        font-size: 12px;
     }
 
     .singup-btn {
@@ -83,61 +83,13 @@
             background: black;
         }
     }
-}
-
-.checkbox-container {
-    display: block;
-    position: relative;
-    padding-left: 2rem;
-    cursor: pointer;
-    user-select: none;
-    margin: 0 0 1.25rem 0;
-
-    input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
+    
+    .logon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        margin-bottom: 0;
+      }
     }
-}
-
-.checkbox-container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-.checkbox-container:hover input:checked ~ .checkmark {
-    background-color: #101e46;
-}
-.checkbox-container input:checked ~ .checkmark {
-    background-color: #233975;
-    border: 1px solid #233975;
-}
-.checkmark {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background: white;
-    border: 1px solid #c4c4c4;
-    border-radius: 2px;
-    top: -4px;
-    left: 0;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.checkbox-container input:checked ~ .checkmark:after {
-    display: block;
-}
-.checkbox-container .checkmark:after {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    width: 5px;
-    height: 10px;
-    left: 8px;
-    top: 4px;
-    transform: rotate(45deg);
 }
