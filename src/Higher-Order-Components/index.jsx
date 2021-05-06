@@ -3,9 +3,9 @@ import { Route } from "react-router-dom";
 import Navbar from "../Components/Navbar/index.jsx";
 
 const HomeAndProductDetailPage = (props) => {
-	return (
+  return (
 		<>
-      <Navbar />
+      <Navbar routeProps={props.routeProps} />
       {props.children}
 		</>
 	);
@@ -18,7 +18,7 @@ export default function SaiGonSneakers({Component, ...props}) {
       {...props}
       render={(routeProps) => {
         return (
-          <HomeAndProductDetailPage>
+          <HomeAndProductDetailPage routeProps={routeProps}>
             <Component {...routeProps} />
           </HomeAndProductDetailPage>
         )
