@@ -32,7 +32,7 @@ function SignUpPage(props) {
       .then((result) => {
         // Nếu gọi Api thành công thì dữ liệu Backend trả về sẽ chạy vô đây
         setMessage(result.data.message);
-        window.localStorage.setItem("accessToken", result.data.accessToken);
+        window.localStorage.setItem("accessToken", JSON.stringify(result.data.accessToken));
         setTimeout(() => {
           props.history.push("/");
         }, 1000);
